@@ -41,6 +41,8 @@ $('.contentContainer').html(content);
     });
 
     $(document).on('click', '#checkoutButton', function () {
+        var content = '<div class="row"><div class="col-lg-4"><form role = "form"><div class = "form-group"><label for = "cloudCodes">云码</label><textarea class = "form-control" rows = "20" name="cloudCodes" id="cloudCodes"></textarea></div></form></div><div class="col-lg-4"><label for = "agentList">代理商列表</label><select class="form-control" id="agentList"></select></div><div class="col-lg-4"><label for = "modelList">型号列表</label><select class="form-control" id="modelList"></select></div></div><div class="row"><div class="col-lg-1 col-lg-offset-11"><button type="submit" id="checkoutSubmitButton" class="btn btn-primary">提交</button></div></div>';
+        $('.contentContainer').html(content);
        $.post('/updateList', function (data, status) {
            $('#agentList').html(data.agentList);
            $('#modelList').html(data.modelList)
