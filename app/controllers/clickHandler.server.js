@@ -190,6 +190,61 @@ function ClickHandler() {
     };
 
 
+    this.getInventory = function (req, res) {
+        User.find({
+            'local.role': 'agent'
+        }, function (err, result) {
+            if (err) throw err;
+            var agentList = '',
+                count = 0;
+
+            result.forEach(function (item) {
+                agentList += '<option' + ' id=' + item._id + '>' + item.local.agent.name + '</option>';
+                count++;
+                if (count == result.length) {
+                    User.find({
+                        '_id': req.user._id
+                    }, function (err, result) {
+                        if (err) throw err;
+
+                        var modelArr = result[0].local.product.model,
+                            modelList = '';
+
+                        modelArr.forEach(function (item) {
+                            modelList += '<option>' + item + '</option>';
+                        });
+
+                        var obj = {
+                            modelList: modelList,
+                            agentList: agentList
+                        };
+                        console.log(JSON.stringify(obj));
+                        res.json(obj);
+                    })
+                }
+            });
+        });
+
+    };
+
+this.inbound = function (req, res) {
+  var numberToAdd = Number(req.url.match('/\/inbound\/(.*)/')[1]);
+    console.log(numberToAdd);
+    User.findOneAndUpdate({
+        '_id': req.user._id
+    }, {
+        $inc: {
+            'cloudCode.factoryInventory.Number': numberToAdd
+        }
+    }, {
+        new: true
+    }, function (err, result) {
+        if (err) throw err;
+        console.log(JSON.stringify(result))
+    })
+
+};
+
     this.sendProfilePage = function (req, res) {
 
         if (req.isAuthenticated()) {

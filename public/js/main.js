@@ -49,6 +49,21 @@ $('.contentContainer').html(content);
        }) 
     });
 
+    $.post('/admin', function (data, status) {
+$('#modelListInbound').html(data.modelList);
+        $('#agentListInventory').html(data.agentList);
+    });
+
+    $('#inboundSubmitButton').click(function () {
+        var cloudCodesInbound = $('#cloudCodesInbound').val().split('\n'),
+            numberToAdd = cloudCodesInbound.length;
+        $.post('/inbound/' + numberToAdd, function (data, status) {
+
+        })
+    });
+
+
+
 
     $(document).on('click', '#checkoutSubmitButton', function () {
         var cloudCodes = $('#cloudCodes').val();
