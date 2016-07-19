@@ -32,7 +32,7 @@ module.exports = function (app, passport) {
                 res.redirect('/');
             });
 
-    app.route('/inbound')
+    app.route('/inbound/*')
         .post(clickHandler.inbound);
 
     app.route('/admin')

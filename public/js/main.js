@@ -57,6 +57,7 @@ $('#modelListInbound').html(data.modelList);
     $('#inboundSubmitButton').click(function () {
         var cloudCodesInbound = $('#cloudCodesInbound').val().split('\n'),
             numberToAdd = cloudCodesInbound.length;
+        alert(numberToAdd);
         $.post('/inbound/' + numberToAdd, function (data, status) {
 
         })
