@@ -24,9 +24,12 @@ var User = new Schema({
 //         cloudCode: {
 //
 // {factoryInventory: {Number: number}, {code: []},
-// {agentInventory: [{_id: _id, number}]},
-// {retailerInventory: [{_id: _id, number}]},
-// {codeInfo: [{
+// {agentInventory: [{_id: _id,
+// number: number,
+// code: [] }]},
+// {retailerInventory: [{_id: _id, number: number,
+// code: []}]},
+// { codeInfo: [{
 //     code: String,
 //     association: String,
 //     status: String,
