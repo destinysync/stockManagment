@@ -1,0 +1,272 @@
+body {
+    background: #ffffff url('../img/noise.png') repeat;
+    padding-bottom: 50px;
+}
+
+.container {
+    /*padding-top: 100px;*/
+}
+
+.searchInputBox {
+    height: 60px;
+}
+
+.btn-lg {
+    height: 60px;
+}
+
+.glyphicon-search {
+    font-size: 35px;
+}
+
+.glyphicon-book {
+    font-size: 50px !important;
+}
+
+.glyphicon-user {
+    font-size: 20px;
+    display: block;
+}
+
+
+/*.signIn {*/
+    /*margin-top: 10px;*/
+    /*display: block;*/
+    /*position: relative;*/
+/*}*/
+
+#signUpDes{
+    font-size: 12px;
+    padding: 25px 5px 5px 5px;
+}
+
+/*.profileIconDiv:hover .signInBox{*/
+    /*display: block;*/
+/*}*/
+
+/*.profileIconDiv:hover .signIconDiv {*/
+    /*background-color: #ededed;*/
+/*}*/
+
+.signInBoxDiv{
+    position: relative;
+    padding-top: 10px;
+}
+
+#agentAddedFeedback{
+    color: red;
+}
+
+#modelAddedFeedback {
+    color:red;
+}
+
+.signInBox {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    border: 1px solid;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    right: 0;
+    z-index: 999;
+    padding: 40px 50px 40px 50px;
+        background: #ffffff url('../img/noise.png') repeat;
+    margin-top: 100px;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    margin-top: 0;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.fstChar {
+    font-size: 60px !important;
+}
+
+.logo {
+    float: right;
+    text-align: center;
+    margin-top: -15px;
+}
+
+.logo h5 {
+    text-align: center;
+}
+
+.profileIconDiv {
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+}
+
+.logOut {
+    margin-top: 10px;
+    font-family: 'Proza Libre', sans-serif;
+}
+
+.myBooksDiv{
+    margin: 30px 0 0 0;
+}
+
+.bookContainer {
+    position: relative;
+    box-shadow: 0px 10px 25px 1px #888888 !important;
+    display: inline-block;
+}
+
+.bookContainer:hover .bookContainerBG {
+    display: inline-block;
+    opacity: 0.6;
+    filter: Alpha(opacity=60); /* IE8 and earlier */
+}
+
+.bookContainerBG {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.bookContainer:hover .deleteButton {
+    display: inline-block;
+}
+
+.deleteButton:hover {
+    color: red;
+}
+
+.deleteButton {
+    cursor: pointer;
+    color: black;
+    text-align: center;
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 50%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 30px;
+    /*padding: 1px 1px 1px 1px;*/
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.bookDiv {
+ /*   display: inline-block;*/
+ margin-top: 30px;   
+height: 200px;
+}
+
+.profileForm {
+    margin-top: 10px;
+    padding: 30px 30px 30px 30px;
+}
+
+
+#userGeoInfoResetButton, #passwordRestButton {
+    margin: -40px 0 0 30px;
+}
+
+
+.bookContainer:hover .deleteRequestToMeButton {
+    display: inline-block;
+}
+
+.deleteRequestToMeButton:hover {
+    color: red;
+}
+
+.deleteRequestToMeButton {
+    cursor: pointer;
+    color: black;
+    text-align: center;
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 50%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 30px;
+    /*padding: 1px 1px 1px 1px;*/
+}
+
+.bookContainer:hover .approveRequestToMeButton {
+    display: inline-block;
+}
+
+.approveRequestToMeButton:hover {
+    color: red;
+}
+
+.approveRequestToMeButton {
+    cursor: pointer;
+    color: black;
+    text-align: center;
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 30px;
+    /*padding: 1px 1px 1px 1px;*/
+}
+
+
+
+.bookContainer:hover .delRequestsToOthersButton {
+    display: inline-block;
+}
+
+.delRequestsToOthersButton:hover {
+    color: red;
+}
+
+.delRequestsToOthersButton {
+    cursor: pointer;
+    color: black;
+    text-align: center;
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 50%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 30px;
+    /*padding: 1px 1px 1px 1px;*/
+}
+
+img {
+    width: 100%;
+}
+
+#unapprovedRequests, #approvedRequests {
+    text-align: center;
+    font-family: 'Rakkas', cursive;
+    margin-top: 30px;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+#unapprovedRequests:hover, #approvedRequests:hover {
+        box-shadow: 0px 10px 80px 10px rgba(0,0,0,.175);
+}
